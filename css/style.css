@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700');
+
+
+@font-face {
+    font-family: 'Big John';
+    src: url('../fonts/big_john-webfont.woff2') format('woff2'),
+         url('../fonts/big_john-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Slim Joe';
+    src: url('../fonts/slim_joe-webfont.woff2') format('woff2'),
+         url('../fonts/slim_joe-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body{
+	font: 400 16px/1.56 Lato, sans-serif;
+	color: #3c4955;
+	background: #ffffff;
+}
+
+/* Layout */
+.ba-container{
+	padding-left: 20px;
+	padding-right: 20px;
+	max-width: 1180px;
+}
+
+/* Typography */
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button{
+	display: inline-block;
+	/* font-family: 'Lato', sans-serif; */
+	font: 700 14px/1 'Lato', sans-serif;
+	color: #48BF72;
+	text-transform: uppercase;
+	border: 2px solid #48BF72;
+	border-radius: 3px;
+	min-height: 39px;
+	padding: 0 20px;
+	line-height: 35px;
+	background: none;
+	text-decoration: none;
+}
+.ba-button--contact{
+	border: 2px solid #334755;
+	color: #334755;
+}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.ba-button:hover{
+	background-color: #48bf72;
+	color: #ffffff;
+}
+.ba-button--contact:hover{
+	background-color: #334755;
+	color: #ffffff;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+	outline: none;
+}
+textarea {
+
+}
+
+.ba-intro{
+	background: #3c4955 url("../img/background.jpg") no-repeat 50%;
+	color: #ffffff;
+	background-size: cover;
+	padding: 36px 0 180px;
+}
+
+.ba-header{
+	display: flex;
+	align-items: center;
+}
+.ba-nav{
+	flex-grow: 1;
+}
+.ba-menu{
+	display: flex;
+	justify-content: flex-end;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	margin-right: 2px;
+	margin-top: -5px;
+}
+.ba-menu a {
+	font: 700 16px/1 Lato, sans-serif;
+	color: #ffffff;
+	text-decoration: none;
+	margin: 0 55px;
+}
+.ba-menu a:hover{
+	color: #48bf72;
+}
+.ba-menu li:not(:first-child):before{
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	width: 1px;
+	height: 18px;
+	background: rgba(255,255,255,0.3);
+	transform: skew(-14deg);
+}
+.ba-menu li:last-child a{
+	margin-right: 0;
+}
+.ba-menu li:first-child a{
+	margin-left: 0;
+}
+.ba-intro-content{
+	text-align: center;
+	padding-top: 144px;
+}
+
+.ba-page-title{
+	font: 400 46px/1.2 "Big John", sans-serif;
+	margin: 0;
+}
+.ba-page-subtitle{
+	font: 400 30px/1.2 "Slim Joe", sans-serif;
+	margin: 15px 40px 40px;
+	margin-left: 0;
+}
+
+.ba-portfolio{
+	padding: 51px 0 89px;
+}
+.ba-work img{
+	display: block;
+	width: 100%;
+}
+.ba-work{
+	color: #ffffff;
+	text-decoration: none;
+	position: relative;
+	display: block;
+	border-radius: 10px;
+	overflow: hidden;
+}
+.ba-work + .ba-work {
+	margin-top: 40px;
+}
+.ba-work-description{
+	background: rgba(72, 191, 114, 0.73);
+	padding: 10px;
+	text-align: center;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	transition: opacity 0.8s;
+}
+
+.ba-work:hover .ba-work-description{
+	opacity: 1;
+}
+.ba-work-description p{
+	margin: 0;
+}
+.ba-work-title{
+	margin: 0;
+}
+
+.ba-row-float{
+	margin-left: -40px;
+}
+[class*="ba-col-"]{
+	float: left;
+	padding-left: 40px;
+}
+.ba-col-40 {
+	width: 41.5%;
+}
+.ba-col-60 {
+	width: 58.5%;
+}
+
+
+/* ba-about */
+.ba-about{
+	padding: 90px 0;
+	background: #334755 url("../img/men-computer.jpg") no-repeat 50%;
+	background-size: cover;
+	color: #ffffff;
+	/* display: flex;
+	justify-content: flex-end; */
+}
+.ba-about .ba-container{
+	display: flex;
+	justify-content: flex-end;
+}
+.ba-about__info{
+	width: 48.5%;
+	padding-right: 135px;
+}
+.ba-about__name{
+	font-size: 30px;
+	line-height: 1.1;
+	margin: 0;
+}
+.ba-about__prof{
+	font-size: 22px;
+	margin: 0;
+	font-weight: 400;
+	margin-bottom: 29px;
+}
+
+.ba-about__desc{
+	margin-bottom: 37px;
+	line-height: 1.6;
+}
+/* Me contacter */
+.ba-cotact{
+	padding-top: 46px;
+	padding-bottom: 53px;
+}
+.ba-contact-form__title{
+	font: 400 26px/1.2 "Big John", sans-serif;
+	margin-bottom: 45px;
+	margin-top: 0;
+	color: #48bf72;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.ba-contact-form{
+	max-width: 700px;
+	margin: 0 auto;
+
+}
+.ba-form-row + .ba-form-row {
+	margin-top: 30px;
+}
+
+.ba-contact-form__name{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.ba-contact-form__name [name="fullname"],
+.ba-contact-form__name [name="email"] {
+	flex-basis: 335px;
+	width: 100%;
+	padding: 15px 15px 13px 75px;
+	border: 2px solid #334755;
+}
+.ba-contact-form__name [name="fullname"]{
+	background: url("../img/icon-user.png") no-repeat 0 50%;
+}
+.ba-contact-form__name [name="email"]{
+	background: url("../img/icon-email.png") no-repeat 0 50%;
+}
+.ba-contact-form__message{
+	display: block;
+	width: 100%;
+	max-height: 225px;
+	margin: 0;
+	padding: 15px 15px 15px 75px;
+	border: 2px solid #334755;
+	background: url("../img/icon-message.png") no-repeat 0 50%;
+}
+.ba-contact-form__button {
+	width: 100%;
+	padding: 6px 0;
+	background: #00C06E;
+	color: #ffffff;
+	font-size: 14px;
+	letter-spacing: 0.22em;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+/* ba-footer */
+
+.ba-footer{
+	padding: 70px 0;
+	background: #334755;
+}
+.ba-footer__wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.ba-copyright__text{
+	color: #FFF;
+	font-size: 16px;
+}
+.ba-copyright__link {
+	color: #ffffff;
+	font-size: 16px;
+	text-decoration: none;
+}
+.ba-copyright__link:hover {
+	color: orange;
+}
+.ba-social_link{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+}
+.ba-social_link li {
+	margin-left: 40px;
+}
+.ba-social_link li:first-child {
+	margin-left: 0;
+
+}
+.ba-social__icon img {
+	transition: .3s ease-in;
+}
+.ba-social__icon:hover img {
+	transform: scale(1.2);
+}
